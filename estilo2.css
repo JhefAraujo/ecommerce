@@ -1,0 +1,6 @@
+main {
+    grid-template-areas: "content content content";
+    display: grid;
+    max-width: 1400px;
+    margin: 0 auto; 
+}

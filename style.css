@@ -1,0 +1,231 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: transparent;
+}
+
+body {
+    background-color: aliceblue;
+    overflow-x: hidden;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "content content content";
+    max-width: 1400px;
+    margin: 0 auto; 
+}
+
+@media screen and (max-width: 1320px) {
+    main {
+        max-width: 800px;
+        grid-template-areas: "content content";
+    }
+    
+}
+
+@media screen and (max-width: 880px) {
+    main {
+        max-width: 430px;
+        grid-template-areas: "content";
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    .content {
+        width: 320px;
+    }
+}
+
+.content {
+    width: 350px;
+    height: 550px;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 18px 4px rgba(0,0,0,0.25);
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+.mediacard {
+    margin-top: 90px;
+    border-radius: 30%;
+    height: 200px;
+    width: 350px;
+}
+
+.textcard {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.buy {
+    background-color: red;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow:  0px 0px 5px 0px rgba(0,0,0,0.39);
+}
+
+.buy:hover {
+    background-color: brown;
+}
+
+a {
+    text-decoration: none;
+}
+
+.compra {
+    padding-top: 7%;
+}
+
+.preco {
+    font-weight: 400;
+    margin-top: 30px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#content2 {
+    background: linear-gradient(0deg, rgba(126,170,205,1) 27%, rgba(56,92,135,1) 100%);
+    color: white;
+}
+
+#card2 {
+    background-size: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(af1blue.webp);
+    border-radius: 20px 20px 0px 0px;
+}
+
+#card1 {
+    background-size: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(dunkred.webp);
+}
+
+#card3 {
+    background-size: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(amax.webp);
+}
+
+#card5 {
+    background-size: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(winflo.png);
+}
+
+#content5 {
+    background: linear-gradient(0deg, rgba(69,65,135,1) 0%, rgba(96,61,123,1) 26%, rgba(225,41,63,1) 100%);
+    color: white;
+}
+
+#card6 {
+    background-size: 300px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(witness.webp);
+}
+
+#content6 {
+    background: linear-gradient(0deg, rgba(41,40,43,1) 0%, rgba(77,86,102,1) 100%);
+    color: white;
+}
+
+.foot {
+    text-align: center;
+    margin: 25px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 3px;
+    text-align: center;
+}
+
+#content1 {
+    background: linear-gradient(0deg, rgba(101,0,16,1) 0%, rgba(109,1,18,1) 27%, rgba(180,7,35,1) 100%);
+    color: white;
+}
+
+.content:hover {
+    animation: crescer 0.3s ease-in-out;
+    transform: scale(1.03);
+}
+
+.content:hover > .mediacard {
+    transform: translateX(20px) scale(1.4) rotate(30deg);
+    animation: girar 0.5s ease-out;
+}
+
+
+@keyframes girar {
+    0%{transform: translateX(0px) scale(1); transform: rotate(0);}
+    100%{transform: translateX(20px) scale(1.4) rotate(30deg);}
+}
+
+@keyframes crescer {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.03);}
+}
+
+.nike {
+    height: 70px;
+    margin-top: 40px;
+}
+
+#content3 {
+    background: linear-gradient(180deg, rgba(255,145,198,0.711922268907563) 0%, rgba(15,26,82,1) 100%);
+    color: white;
+}
+
+#content4 {
+    background: linear-gradient(0deg, rgba(30,27,29,1) 0%, rgba(88,88,88,1) 100%);
+    color: white;
+}
+
+#card4 {
+    background-image: url(dior.png);
+    background-position: center center;
+    background-size: 300px;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+ }
+
+ /* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(56, 56, 56);
+  }
+
+  header {
+    text-align: center;
+  }
