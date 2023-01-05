@@ -72,10 +72,14 @@ main {
         margin: auto;
         transform: translateY(-260px) scale(0.8);
         height: 2920px;
-        
     }
     body {
         background-size: 250px;
+        overflow-x: hidden;
+    }
+    .test {
+        min-width: 360px;
+        overflow: hidden;
     }
     .content {
         height: 550px;
