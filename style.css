@@ -23,40 +23,69 @@ main {
     display: grid;
     grid-template-areas: "content content content";
     max-width: 1400px;
-    margin: 0 auto; 
+    grid-column-gap: 150px;
+    margin: auto;
 }
-
-@media screen and (max-width: 1320px) {
+@media screen and (min-width: 1501px) {
+    .content {
+        height: 550px;
+    }
+}
+@media screen and (max-width: 1500px) {
     main {
-        max-width: 800px;
+        display: grid;
         grid-template-areas: "content content";
-    }
-    
-}
-
-@media screen and (max-width: 880px) {
-    main {
-        max-width: 430px;
-        grid-template-areas: "content";
-    }
-    body {
-        width: 100vw;
-        height: 100vh;
-        overflow-x: hidden;
+        max-width: 750px;
+        grid-column-gap: 50px;
+        margin: auto;
     }
     .content {
-        width: 320px;
+        height: 500px;
     }
+}
+
+@media screen and (max-width: 850px) {
+    main {
+        display: grid;
+        grid-template-areas: "content";
+        max-width: 350px;
+        grid-column-gap: 50px;
+        margin: auto;
+        transform: translateY(-260px) scale(0.8);
+        height: 2920px;
+        
+    }
+    .content {
+        height: 550px;
+    }
+}
+
+.content:hover {
+    animation: crescer 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.content:hover > .mediacard {
+    transform: translateX(20px) scale(1.4) rotate(30deg);
+    animation: girar 0.5s ease-out;
+}
+
+
+@keyframes girar {
+    0%{transform: translateX(0px) scale(1); transform: rotate(0);}
+    100%{transform: translateX(20px) scale(1.4) rotate(30deg);}
+}
+
+@keyframes crescer {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.1);}
 }
 
 .content {
-    width: 350px;
-    height: 550px;
     margin-top: 50px;
     border-radius: 20px;
     box-shadow: 0px 0px 18px 4px rgba(0,0,0,0.25);
     display: inline-block;
-    margin-left: 10%;
     margin-right: auto;
 }
 
@@ -168,27 +197,6 @@ footer {
 #content1 {
     background: linear-gradient(0deg, rgba(101,0,16,1) 0%, rgba(109,1,18,1) 27%, rgba(180,7,35,1) 100%);
     color: white;
-}
-
-.content:hover {
-    animation: crescer 0.3s ease-in-out;
-    transform: scale(1.03);
-}
-
-.content:hover > .mediacard {
-    transform: translateX(20px) scale(1.4) rotate(30deg);
-    animation: girar 0.5s ease-out;
-}
-
-
-@keyframes girar {
-    0%{transform: translateX(0px) scale(1); transform: rotate(0);}
-    100%{transform: translateX(20px) scale(1.4) rotate(30deg);}
-}
-
-@keyframes crescer {
-    0% {transform: scale(1);}
-    100% {transform: scale(1.03);}
 }
 
 .nike {
